@@ -72,7 +72,7 @@ class FlagInputHandler(sublime_plugin.TextInputHandler):
         return sublime.Html(f'<strong>Command:</strong> {self.args["command"]} {flags}')
 
 
-class PipeVimCommand(sublime_plugin.TextCommand):
+class PiperCommand(sublime_plugin.TextCommand):
     def run(self, edit, command, flags: str = ''):
         if not all(self.view.sel()):
             regions = [sublime.Region(0, self.view.size())]
